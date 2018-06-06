@@ -3,7 +3,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/paulyoung/purescript-prettier-printer.git"
+    "url": "git://github.com/eric-corumdigital/purescript-prettier-printer.git"
   },
   "ignore": [
     "**/.*",

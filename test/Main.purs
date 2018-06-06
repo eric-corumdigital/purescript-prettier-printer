@@ -1,12 +1,10 @@
 module Test.Main where
 
+import Effect (Effect)
 import Prelude
-
-import Control.Monad.Eff (Eff)
-import Node.FS (FS)
-import Test.Spec.Discovery (discover)
+import Test.Prettier.Printer (spec)
 import Test.Spec.Reporter.Console (consoleReporter)
-import Test.Spec.Runner (RunnerEffects, run)
+import Test.Spec.Runner (run)
 
-main :: Eff (RunnerEffects (fs :: FS)) Unit
-main = discover "Test\\.Prettier.Printer\\.*" >>= run [consoleReporter]
+main :: Effect Unit
+main = run [consoleReporter] spec
